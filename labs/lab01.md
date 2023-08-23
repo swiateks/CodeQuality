@@ -35,17 +35,18 @@ In this lab you will update and run your first code changes.
 1. Open the java file [Config.java](spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/Config.java)
 2. Notice the varaibles on 18,21,24,27 > var1, Endpoint, Key, var4.
 3. Replace the values with proper varaible names in Camel Case as below:
-   i. Replace var1 on line 18 & 41 with 
+
+    Replace var1 on line 18 & 41 with 
     ```
     embeddingDeploymentId 
     ```
-    Replace  Endpointline 21 & 38 with 
+    Replace Endpoint on line 21 & 38 with 
     ```
     openAiEndpoint
     ```
     Replace Key line 24 & 39 with 
     ```
-    openAiApiKey(
+    openAiApiKey
     ```
     Replace var4 line 27 & 47 with 
     ```
