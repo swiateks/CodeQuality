@@ -10,6 +10,8 @@ In this lab you will update and run your first code changes.
    // This class is provided as an example of how to configure the Azure Cognitive Search vector store.
    ```
 3. Copy the following comment after line 26:
+   ```
    // This bean is only created if the property vector-store.type is set to azure-search.
+   ```
 4. Save the file and commit the changes.
 5. Now you have added meaningful code comments to make it easier for the reader to infer the functionality of the code.
