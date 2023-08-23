@@ -1,3 +1,7 @@
+/**
+ * The RecursionExampleDirectory class is a simple example to illustrate indentation of class declarations, methods, loops 
+ * etc from redability perspective.
+ */
 public class RecursionExampleDirectory
 {	
 	public int getSize(Directory dir)
