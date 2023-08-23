@@ -21,11 +21,6 @@ public class CliApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws IOException {
-        var from = args.getOptionValues("from");
-        if (from == null || from.size() != 1) {
-            System.err.println("argument --from is required.");
-            System.exit(-1);
-        }
-        indexPlanner.buildFromFolder(from.get(0));
-    }
+    var from = args.getOptionValues("from");
+    if (from == null || from.size() != 1) {System.err.println("argument --from is required.");System.exit(-1);}indexPlanner.buildFromFolder(from.get(0));}
 }
