@@ -1,8 +1,8 @@
 /**
- * The Foo class is a simple example to illustrate documentation 
+ * The SampleCodeCommenting class is a simple example to illustrate documentation 
  * comments.
  */
-public class Foo { 
+public class SampleCodeCommenting { 
     /**
     * An integer to keep track of for fun.
     */
