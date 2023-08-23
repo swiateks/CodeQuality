@@ -28,4 +28,20 @@ In this lab you will update and run your first code changes.
         }
         indexPlanner.buildFromFolder(from.get(0));
      ```
-4. Notice that both the previous code and current code snippet does the same job but it is now better indented and hence improves readbility.
+4. Notice that both the previous code and current code snippet does the same job but it is now better indented and hence improves readability.
+
+## 1.3 Update the code file to be consitent with Naming Convensions
+
+1. Open the java file [Config.java](spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/Config.java)
+2. Notice the varaibles on 18,21,24,27 > var1, Endpoint, Key, var4.
+3. Replace the values with proper varaible names in Camel Case as below
+    ```
+    embeddingDeploymentId(line 18 & 41)
+    ```
+    openAiEndpoint(line 21 & 38)
+    ```
+    openAiApiKey(line 24 & 39)
+    ```
+    vectorJsonFile(line 27 & 47).
+    ```
+5. Also replace the use of these variables
