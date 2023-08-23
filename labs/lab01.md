@@ -28,3 +28,4 @@ In this lab you will update and run your first code changes.
         }
         indexPlanner.buildFromFolder(from.get(0));
      ```
+   4. Notice that both the previous code and current code snippet does the same job but it is now better indented and hence improves readbility.
