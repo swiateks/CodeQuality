@@ -7,8 +7,11 @@
 - [ ] [Lab Setup](/labs/setup.md)
 
 ### Module 1: Writing Quality Code
-- Example: [Code-Commenting-Sample-1](examples/SampleCodeCommenting)
-- Example: [greet-everyone.yml](/.github/workflows/greet-everyone.yml)
+- Code Commenting: [Code-Commenting-Sample-1](examples/SampleCodeCommenting)
+- Indentation:
+- Naming Convention: [Java-Convention-Collection](principles/JavaNamingConvensions.md).
+                     [C#-Coding-Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+- DRY Principle:
 - [ ] _Hands-on Lab:_ :point_right: [Activity 1](/labs/lab01.md)
 
 ### Module 2: Reviewing Code
