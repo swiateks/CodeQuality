@@ -7,7 +7,7 @@
 - [ ] [Lab Setup](/labs/setup.md)
 
 ### Module 1: Writing Quality Code
-- Example: [java-sample-1](examples/sample-1-demo.java)
+- Example: [Code-Commenting-Sample-1](examples/SampleCodeCommenting)
 - Example: [greet-everyone.yml](/.github/workflows/greet-everyone.yml)
 - [ ] _Hands-on Lab:_ :point_right: [Activity 1](/labs/lab01.md)
 
