@@ -9,8 +9,8 @@
 ### Module 1: Writing Quality Code
 - Code Commenting: [Code-Commenting-Sample-1](examples/SampleCodeCommenting)
 - Indentation:
-- Naming Convention: [Java-Convention-Collection](principles/JavaNamingConvensions.md).
-                   - [C#-Coding-Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+- Naming Convention: 1. [Java-Convention-Collection](principles/JavaNamingConvensions.md)
+                     2. [C#-Coding-Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 - DRY Principle: [DRY-ASP.NETCore-Development](https://learn.microsoft.com/en-us/archive/msdn-magazine/2019/june/patterns-and-practices-super-dry-development-for-asp-net-core)
 - [ ] _Hands-on Lab:_ :point_right: [Activity 1](/labs/lab01.md)
 
