@@ -7,7 +7,7 @@
 - [ ] [Lab Setup](/labs/setup.md)
 
 ### Module 1: Writing Quality Code
-- Code Commenting: [Code-Commenting-Sample-1](examples/SampleCodeCommenting)
+- Code Commenting: [Code-Commenting-Sample-1](examples/SampleCodeCommenting.java).
 - Indentation: [Indentation-Sample-2](examples/RecursionExampleDirectory.java).
 - Naming Convention: 1. [Java-Coding-Convention](principles/JavaNamingConvensions.md)
                      2. [C#-Coding-Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
