@@ -10,7 +10,7 @@
 - Code Commenting: [Code-Commenting-Sample-1](examples/SampleCodeCommenting)
 - Indentation:
 - Naming Convention: [Java-Convention-Collection](principles/JavaNamingConvensions.md).
-                     [C#-Coding-Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+                   - [C#-Coding-Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 - DRY Principle:
 - [ ] _Hands-on Lab:_ :point_right: [Activity 1](/labs/lab01.md)
 
