@@ -53,3 +53,80 @@ In this lab you will update and run your first code changes.
     vectorJsonFile
     ```
 4. Now you have changed the variable names into the ones which make more sense and also follow consistent camel case notations
+
+## 1.4 Update the code file to implement DRY (Don't Repeat Yourself) Principle
+1. Open the java file [SimpleCollegeApp.java](dry-principle/SimpleCollegeApp.java)
+2. Notice the varaibles methods college(),college1() and college2() on line 12,25 and 39.
+3. These essentially perform the same acvitity of printing the College and Department Name.
+4. Now opent the java file [SimpleCollegeAppDRY](dry-principle/SimpleCollegeAppDRY.java)
+5. Replace the contents of this file with below code:
+
+   ```
+      import java.util.*;
+       
+      // Main class
+      public class SimpleCollegeAppDRY {
+       
+          // Method 1
+          // For cse department
+          public void CSE()
+          {
+       
+              // Print statement
+              System.out.println("This is computer science");
+       
+              // Calling method
+              college();
+          }
+       
+          // Method 2
+          // For ece dept method
+          public void ECE()
+          {
+              System.out.println("This is electronics");
+       
+              // Calling method
+              college();
+          }
+       
+          // Method 3
+          // For IT dept
+          public void IT()
+          {
+       
+              // Print statement
+              System.out.println(
+                  "This is Information Technology");
+       
+              // Calling method
+              college();
+          }
+       
+          // Method 4
+          // For college dept
+          public void college()
+          {
+       
+              // Print statement
+              System.out.println("IIT - Madras");
+          }
+       
+          // Method 5
+          // Main driver method
+          public static void main(String[] args)
+          {
+       
+              // Creating object of class in main() method
+              GFG s = new GFG();
+       
+              // Calling the methods one by one
+              // as created above
+              s.CSE();
+              s.ECE();
+              s.IT();
+          }
+      }
+   ```
+   6. Save and commit the file
+   7. Notice now there is only one college method implementation on line being called from all the methods.
+   8. You can compare the changes by navigating to > 
