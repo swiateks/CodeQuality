@@ -52,3 +52,4 @@ In this lab you will update and run your first code changes.
     ```
     vectorJsonFile
     ```
+4. Now you have changed the variable names into the ones which make more sense and also follow consistent camel case notations
