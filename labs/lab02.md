@@ -86,82 +86,34 @@ In this lab you will identify issues with code and provide reviews to rectify th
         }
     }
     ``` 
-5. To prevent these types of memory leaks, the finally block should be used to close resources when they are no longer needed.
+5. Save and Commit the file.
+6. To prevent these types of memory leaks, the finally block should be used to close resources when they are no longer needed.
 
    
-## 2.4 Update the code file to implement DRY (Don't Repeat Yourself) Principle
-1. Open the java file [SimpleCollegeApp.java](../dry-principle/SimpleCollegeApp.java)
-2. Notice the varaibles methods college(),college1() and college2() on line 12,25 and 39.
-3. These essentially perform the same acvitity of printing the College and Department Name.
-4. Now open the java file [SimpleCollegeAppDRY.java](../dry-principle/SimpleCollegeAppDRY.java)
-5. Replace the contents of this file with below code:
+## 2.4 Review Null pointers
+1. Open the java file [NullPointerExceptionExample.java](../codeReview/NullPointerExceptionExample.java)
+2. In this example, the printLength() method calls the length() method of a String without performing a null check prior to calling the method.
+3. To fix the NullPointerException in the above example, the string should be checked for null or empty values before it is used any further
+4. Replace the contents of this file with below code:
 
    ```
-      import java.util.*;
-       
-      // Main class
-      public class SimpleCollegeAppDRY {
-       
-          // Method 1
-          // For cse department
-          public void CSE()
-          {
-       
-              // Print statement
-              System.out.println("This is computer science");
-       
-              // Calling method
-              college();
-          }
-       
-          // Method 2
-          // For ece dept method
-          public void ECE()
-          {
-              System.out.println("This is electronics");
-       
-              // Calling method
-              college();
-          }
-       
-          // Method 3
-          // For IT dept
-          public void IT()
-          {
-       
-              // Print statement
-              System.out.println(
-                  "This is Information Technology");
-       
-              // Calling method
-              college();
-          }
-       
-          // Method 4
-          // For college dept
-          public void college()
-          {
-       
-              // Print statement
-              System.out.println("IIT - Madras");
-          }
-       
-          // Method 5
-          // Main driver method
-          public static void main(String[] args)
-          {
-       
-              // Creating object of class in main() method
-              GFG s = new GFG();
-       
-              // Calling the methods one by one
-              // as created above
-              s.CSE();
-              s.ECE();
-              s.IT();
-          }
-      }
+        import org.apache.commons.lang3.StringUtils;
+   
+         public class NullPointerExceptionExample {
+             private static void printLength(String str) {
+                 if (StringUtils.isNotEmpty(str)) {
+                     System.out.println(str.length());
+                 } else {
+                     System.out.println("Empty string");
+                 }
+             }
+         
+             public static void main(String args[]) {
+                 String myString = null;
+                 printLength(myString);
+             }
+         }
    ```
-6. Save and commit the file
-7. Notice now there is only one college method implementation on line being called from all the methods.
-8. You can compare the changes by navigating to > 
+7. Save and commit the file
+8. The code is updated with a check in the printLength() method that makes sure the string is not empty using the apache commons StringUtils.isNotEmpty() method.
+9. Only if the string is not empty the length() method of the string is called, else it prints the message Empty string to console.
