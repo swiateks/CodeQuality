@@ -69,7 +69,7 @@ In this lab you will identify issues with code and provide reviews to rectify th
 1. Open the java file [ReadUrl.java](../codeReview/ReadUrl.java)
 2. Notice the readFromURL() method opens a URL connection object but does not close it.
 3. Since the object is referenced even after it is no longer used, it continues to block memory and is not eligible for garbage collection.
-4. Add finally block on line 16 to close the connection:
+4. Add finally block **after** line 15 to close the connection:
 
     ```
       finally {
