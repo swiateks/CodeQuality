@@ -1,9 +1,8 @@
-
 // A Java program to demonstrate that invoking a method
 // on null causes NullPointerException
 import java.io.*;
  
-class NullPointerDemo
+class NullPointerException
 {
     public static void main (String[] args)
     {
