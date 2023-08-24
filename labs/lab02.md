@@ -21,19 +21,46 @@ In this lab you will identify issues with code and provide reviews to rectify th
 5. Save the file and commit the changes.
 6. With these changes, as long as the passed-in class implements the IDatabaseConnection interface, we can pass in any class for any kind of database connection. So if we find a bug in the SQL Server connection class, only SQL Server clients are affected. That means the clients with different databases will continue to work, and we only have to fix the code for SQL Server customers in the one class. This reduces the maintenance overhead and so reduces the overall cost of maintenance.
 
-## 2.2 Update the code file and adjust indentation to understand execution steps
+## 2.2 Review Exception Handling
 
-1. Open the java file [CliApplication.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/CliApplication.java)
-2. Notice line 25, if block where a set of conditions are evaluated and actions are taken in a single line.
-3. Now replace this line 25 with below code snippet
+1. Open the java file [Company.java](../codeReview/Company.java)
+2. Notice The main method tries to print the fourth item in the array, which doesn’t exist.
+3. If you execute this program, it causes the ArrayIndexOutOfBoundsException exception to be thrown.
+4. When that happens, the program’s execution is stopped and the exception’s message is shown.
+5. The fourth and fifth messages are never displayed. There is no exception handling.
+6. Now replace this entire code will below snippet
     ```
-        if (from == null || from.size() != 1) {
-            System.err.println("argument --from is required.");
-            System.exit(-1);
-        }
-        indexPlanner.buildFromFolder(from.get(0));
+       import java.io.*;
+
+         public class Company {
+         
+             public static void main(String[] args) {
+         	// write your code here
+         	    System.out.println("First line");
+         	    System.out.println("Second line");
+         	    System.out.println("Third line");
+         
+         	    try {
+         	        int[] myIntArray = new int[]{1, 2, 3};
+         	        print4thItemInArray(myIntArray);
+         	    } catch (ArrayIndexOutOfBoundsException e){
+         	        System.out.println("The array doesn't have four items!");
+         	    }
+         
+         	    System.out.println("Fourth line");
+         	    System.out.println("Fith line");
+             }
+         
+             private static void print4thItemInArray(int[] arr) {
+                 System.out.println(arr[3]);
+             }
+         }
      ```
-4. Notice that both the previous code and current code snippet does the same job but it is now better indented and hence improves readability.
+7. Notice the try catch block for exception handling.
+8. This time, the exception still happens, same as before.
+9. The flow control of the program is then handed to the catch block.
+10. Inside the catch block, the code just prints a message explaining that the array doesn’t have four items.
+11. Then, execution is resumed to print rest of the lines
 
 ## 2.3 Update the code file to be consitent with Naming Convensions
 
