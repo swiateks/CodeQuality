@@ -64,7 +64,7 @@ Build tools like Maven use a pattern to decide if a class is a test classes or n
 - includes all of its subdirectories and all Java filenames that end with TestCase.
 Therefore, it is common practice to use the Test or Tests suffix at the end of test classes names.
 
-## 2.2 Where should the test be located?
+## 2.3 Where should the test be located?
 Typical, unit tests are created in a separate source folder to keep the test code separate from the real code. The standard convention from the Maven and Gradle build tools is to use:
 
 src/main/java - for Java classes
