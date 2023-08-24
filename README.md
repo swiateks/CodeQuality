@@ -18,7 +18,8 @@
 ### Module 2: Reviewing Code
 - Tight Coupling: [Tight-Coupling-Example](examples/Subject.java)
 - Loose Coupling: [Loose-Coupling-Example](examples/Topic.java)
-- Memory Leak: [Meamry-Leak-Example](examples/StaticTest.java)
+- Memory Leak: [Memory-Leak-Example](examples/StaticTest.java)
+- Null Pointer Exception: [Null-Pointer-Example](examples/NullPointerException.java)
 - [ ] _Hands-on Lab:_ :point_right: [Activity 2](/labs/lab02.md)
 
 ### Module 3: Testing Code
