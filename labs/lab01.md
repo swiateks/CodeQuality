@@ -18,7 +18,7 @@ In this lab you will update and run your first code changes.
 
 ## 1.2 Update the code file and adjust indentation to understand execution steps
 
-1. Open the java file [AzSearchConfig.java](spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/CliApplication.java)
+1. Open the java file [AzSearchConfig.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/CliApplication.java)
 2. Notice line 25, if block where a set of conditions are evaluated and actions are taken in a single line.
 3. Now replace this line 25 with below code snippet
     ```
@@ -32,7 +32,7 @@ In this lab you will update and run your first code changes.
 
 ## 1.3 Update the code file to be consitent with Naming Convensions
 
-1. Open the java file [Config.java](spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/Config.java)
+1. Open the java file [Config.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/Config.java)
 2. Notice the varaibles on 18,21,24,27 > var1, Endpoint, Key, var4.
 3. Replace the values with proper varaible names in Camel Case as below:
 
@@ -55,10 +55,10 @@ In this lab you will update and run your first code changes.
 4. Now you have changed the variable names into the ones which make more sense and also follow consistent camel case notations
 
 ## 1.4 Update the code file to implement DRY (Don't Repeat Yourself) Principle
-1. Open the java file [SimpleCollegeApp.java](https://github.com/BasujitaBhattacharya/CodeQuality/blob/main/dry-principle/SimpleCollegeApp.java)
+1. Open the java file [SimpleCollegeApp.java](../dry-principle/SimpleCollegeApp.java)
 2. Notice the varaibles methods college(),college1() and college2() on line 12,25 and 39.
 3. These essentially perform the same acvitity of printing the College and Department Name.
-4. Now open the java file [SimpleCollegeAppDRY.java](dry-principle/SimpleCollegeAppDRY.java)
+4. Now open the java file [SimpleCollegeAppDRY.java](../dry-principle/SimpleCollegeAppDRY.java)
 5. Replace the contents of this file with below code:
 
    ```
