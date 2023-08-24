@@ -19,7 +19,9 @@ In this lab you will identify issues with code and provide reviews to rectify th
    }
    ```
 5. Save the file and commit the changes.
-6. With these changes, as long as the passed-in class implements the IDatabaseConnection interface, we can pass in any class for any kind of database connection. So if we find a bug in the SQL Server connection class, only SQL Server clients are affected. That means the clients with different databases will continue to work, and we only have to fix the code for SQL Server customers in the one class. This reduces the maintenance overhead and so reduces the overall cost of maintenance.
+6. With these changes, as long as the passed-in class implements the IDatabaseConnection interface, we can pass in any class for any kind of database connection.
+7. So if we find a bug in the SQL Server connection class, only SQL Server clients are affected. That means the clients with different databases will continue to work, and we only have to fix the code for SQL Server customers in the one class.
+8. This reduces the maintenance overhead and so reduces the overall cost of maintenance.
 
 ## 2.2 Review Exception Handling
 
