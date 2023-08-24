@@ -1,6 +1,6 @@
 # CodeQuality
-> The Code Quality training with workflow templates, examples, hands-on labs and additional learning resources.
-> It has sample code and references to publicly available resources
+- The Code Quality training with workflow templates, examples, hands-on labs and additional learning resources.
+- It has sample code and references to publicly available resources
 
 ## Examples & Hands-on Labs
 
