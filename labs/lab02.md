@@ -1,20 +1,25 @@
-# 2 - Writing Quality Code
-In this lab you will update and run your first code changes.
+# 2 - Reviewing Code
+In this lab you will identify issues with code and provide reviews to rectify them.
 > Duration: 15-20 minutes
 
-## 2.1 Update the code file and add comments to provide details about sections of code
+## 2.1 Review Tight Coupling
 
-1. Open the java file [AzSearchConfig.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/AzSearchConfig.java)
-2. Edit the file and copy the following comment after line 12:
+1. Open the java file [Database.java](../codeReview/Database.java)
+2. Notice database class is tied to using SQL Server. To accept any other type of database it would require hard coded change.
+3. Edit the file and copy and replace contents of file with below code:
    ```
-   // This class is provided as an example of how to configure the Azure Cognitive Search vector store.
-   ```
-3. Copy the following comment after line 26:
-   ```
-   // This bean is only created if the property vector-store.type is set to azure-search.
+   public class Database
+   {
+       private IDatabaseConnection _databaseConnection;
+   
+       public Database(IDatabaseConnection databaseConnection)
+       {
+           _databaseConnection = datbaseConnection;
+       }
+   }
    ```
 5. Save the file and commit the changes.
-6. Now you have added meaningful code comments to make it easier for the reader to infer the functionality of the code.
+6. With these changes, as long as the passed-in class implements the IDatabaseConnection interface, we can pass in any class for any kind of database connection. So if we find a bug in the SQL Server connection class, only SQL Server clients are affected. That means the clients with different databases will continue to work, and we only have to fix the code for SQL Server customers in the one class. This reduces the maintenance overhead and so reduces the overall cost of maintenance.
 
 ## 2.2 Update the code file and adjust indentation to understand execution steps
 
