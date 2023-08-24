@@ -64,30 +64,31 @@ In this lab you will identify issues with code and provide reviews to rectify th
 10. Inside the catch block, the code just prints a message explaining that the array doesn’t have four items.
 11. Then, execution is resumed to print rest of the lines
 
-## 2.3 Update the code file to be consitent with Naming Convensions
+## 2.3 Review Memory Leaks
 
-1. Open the java file [Config.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/Config.java)
-2. Notice the varaibles on 18,21,24,27 > var1, Endpoint, Key, var4.
-3. Replace the values with proper varaible names in Camel Case as below:
+1. Open the java file [ReadUrl.java](../codeReview/ReadUrl.java)
+2. Notice the readFromURL() method opens a URL connection object but does not close it.
+3. Since the object is referenced even after it is no longer used, it continues to block memory and is not eligible for garbage collection.
+4. Add finally block on line 16 to close the connection:
 
-    Replace var1 on line 18 & 41 with 
     ```
-    embeddingDeploymentId 
-    ```
-    Replace Endpoint on line 21 & 38 with 
-    ```
-    openAiEndpoint
-    ```
-    Replace Key line 24 & 39 with 
-    ```
-    openAiApiKey
-    ```
-    Replace var4 line 27 & 47 with 
-    ```
-    vectorJsonFile
-    ```
-4. Now you have changed the variable names into the ones which make more sense and also follow consistent camel case notations
+      finally {
+        if (urlConnection != null)
+        {
+          try
+          {
+            urlConnection.close();
+          }
+          catch (IOException ioe)
+          {
+            ioe.printStackTrace();
+          }
+        }
+    }
+    ``` 
+5. To prevent these types of memory leaks, the finally block should be used to close resources when they are no longer needed.
 
+   
 ## 2.4 Update the code file to implement DRY (Don't Repeat Yourself) Principle
 1. Open the java file [SimpleCollegeApp.java](../dry-principle/SimpleCollegeApp.java)
 2. Notice the varaibles methods college(),college1() and college2() on line 12,25 and 39.
