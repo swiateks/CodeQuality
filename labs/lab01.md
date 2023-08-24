@@ -1,4 +1,4 @@
-# 1 - Introduction to Code Quality
+# 1 - Writing Quality Code
 In this lab you will update and run your first code changes.
 > Duration: 15-20 minutes
 
