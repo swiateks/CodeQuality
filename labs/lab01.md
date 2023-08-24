@@ -18,7 +18,7 @@ In this lab you will update and run your first code changes.
 
 ## 1.2 Update the code file and adjust indentation to understand execution steps
 
-1. Open the java file [AzSearchConfig.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/CliApplication.java)
+1. Open the java file [CliApplication.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/CliApplication.java)
 2. Notice line 25, if block where a set of conditions are evaluated and actions are taken in a single line.
 3. Now replace this line 25 with below code snippet
     ```
