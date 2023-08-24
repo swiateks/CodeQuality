@@ -23,10 +23,5 @@
 - [ ] _Hands-on Lab:_ :point_right: [Activity 2](/labs/lab02.md)
 
 ### Module 3: Testing Code
-- Example: [environments-secrets.yml](/.github/workflows/environments-secrets.yml)
+- Example: [Unit-Test-Example](examples/AClassWithOneJUnitTest.java)
 - [ ] _Hands-on Lab:_ :point_right: [Activity 3](/labs/lab03.md)
-
-### Module 4: Maintaining Code
-- Example: [reusable-workflow-template.yml](/.github/workflows/reusable-workflow-template.yml)
-- Example: [super-linter.yml](/.github/workflows/super-linter.yml)
-- [ ] _Hands-on Lab:_ :point_right: [Activity 4](/labs/lab04.md)
