@@ -5,10 +5,11 @@ package com.github.samples.solid.dip.violation;
  */
 public class Pilot {
 
-    private RacingCar vehicle;
+    private RacingCar vehicle; 
 
     public Pilot(){
-        this.vehicle = new RacingCar(100);
+        this.vehicle = new RacingCar(100); //tight coupling now Pilot depends on RacingCar
+       
     }
 
     public void increaseSpeed(){
