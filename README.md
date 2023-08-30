@@ -25,3 +25,7 @@
 ### Module 3: Testing Code
 - Example: [Unit-Test-Example](examples/AClassWithOneJUnitTest.java)
 - [ ] _Hands-on Lab:_ :point_right: [Activity 3](/labs/lab03.md)
+
+### Module 4: SOLID Principles
+- Example: [SOLID-Principles-Examples](examples/solid-principles)
+- [ ] _Hands-on Lab:_ :point_right: [Activity 4](/labs/lab04.md)
