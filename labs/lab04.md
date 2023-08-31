@@ -196,3 +196,4 @@ Instead, make interfaces more abstract. It helps adhere to both the SRP (the int
         notifier.alertWeatherConditions(currentConditions);
     }
     ```
+9. Notice in the bad example here, the WeatherTracker depends on the low-level details of the different notification systems (a phone, an emailer, etc.). These should instead be depending on some abstraction. The good example introduces this abstraction--a "Notifier" interface.
