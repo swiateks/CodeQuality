@@ -65,103 +65,99 @@ In this lab you will implement each of the SOLID Principles and update the code
      ```
 7. Notice how in the bad example, any time we want to add a new style of greeting, we have to change the Greeter class to accept a new type of personality. We don't want to have to modify our existing, working code to add something new. Instead, as demonstrated in the good example, we have a high-level Greeter class that is instantiated with some Personality... we don't know which yet, just that it will be some object that implements the Personality interface. Now we can add new objects like FormalPersonality, CasualPersonality, and IntimatePersonality, and just make sure they correctly implement the Personality interface (in this case that means they must have a `greet()` method). The Greeter class is now open for future extension, while remaining closed for modification.
 
-## 1.3 Update the code file to be consitent with Naming Convensions
+## 1.3 Update the code to comply with  Liskov's Substitution Principle
 
-1. Open the java file [Config.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/Config.java)
-2. Notice the varaibles on 18,21,24,27 > var1, Endpoint, Key, var4.
-3. Replace the values with proper varaible names in Camel Case as below:
+1. Open the java file [StudioModified.java](../module4/SOLID-main/liskov_substitution/good/src/StudioModified.java)
+2. Edit the file and copy the following code after line 7.
+    ```
+        public StudioModified() {
+            this.numberOfRooms = 0;
+        }
 
-    Replace var1 on line 18 & 41 with 
+        public void setSquareFootage(int sqft) {
+            this.squareFootage = sqft;
+        }
     ```
-    embeddingDeploymentId 
-    ```
-    Replace Endpoint on line 21 & 38 with 
-    ```
-    openAiEndpoint
-    ```
-    Replace Key line 24 & 39 with 
-    ```
-    openAiApiKey
-    ```
-    Replace var4 line 27 & 47 with 
-    ```
-    vectorJsonFile
-    ```
-4. Now you have changed the variable names into the ones which make more sense and also follow consistent camel case notations
 
-## 1.4 Update the code file to implement DRY (Don't Repeat Yourself) Principle
-1. Open the java file [SimpleCollegeApp.java](../dry-principle/SimpleCollegeApp.java)
-2. Notice the varaibles methods college(),college1() and college2() on line 12,25 and 39.
-3. These essentially perform the same acvitity of printing the College and Department Name.
-4. Now open the java file [SimpleCollegeAppDRY.java](../dry-principle/SimpleCollegeAppDRY.java)
-5. Replace the contents of this file with below code:
+3. Open the java file [BedroomAdder.java](../module4/SOLID-main/liskov_substitution/good/src/BedroomAdder.java)
+4. Edit the file and copy the following code after line 5.
+    ```
+        public void addBedroom(PenthouseSuiteModified penthouse) {
+        penthouse.numberOfBedrooms += 1;
+    }
+    ```
 
-   ```
-      import java.util.*;
-       
-      // Main class
-      public class SimpleCollegeAppDRY {
-       
-          // Method 1
-          // For cse department
-          public void CSE()
-          {
-       
-              // Print statement
-              System.out.println("This is computer science");
-       
-              // Calling method
-              college();
-          }
-       
-          // Method 2
-          // For ece dept method
-          public void ECE()
-          {
-              System.out.println("This is electronics");
-       
-              // Calling method
-              college();
-          }
-       
-          // Method 3
-          // For IT dept
-          public void IT()
-          {
-       
-              // Print statement
-              System.out.println(
-                  "This is Information Technology");
-       
-              // Calling method
-              college();
-          }
-       
-          // Method 4
-          // For college dept
-          public void college()
-          {
-       
-              // Print statement
-              System.out.println("IIT - Madras");
-          }
-       
-          // Method 5
-          // Main driver method
-          public static void main(String[] args)
-          {
-       
-              // Creating object of class in main() method
-              GFG s = new GFG();
-       
-              // Calling the methods one by one
-              // as created above
-              s.CSE();
-              s.ECE();
-              s.IT();
-          }
-      }
-   ```
-6. Save and commit the file
-7. Notice now there is only one college method implementation on line being called from all the methods.
-8. You can compare the changes by navigating to > 
+5. Open the java file [PenthouseSuiteModified.java](../module4/SOLID-main/liskov_substitution/good/src/PenthouseSuiteModified.java)
+6. Edit the file and copy the following code after line 5.
+    ```
+        int squareFootage;
+        int numberOfBedrooms;
+
+        public PenthouseSuiteModified() {
+            this.numberOfBedrooms = 4;
+        }
+
+        public void setSquareFootage(int sqft) {
+            this.squareFootage = sqft;
+        }
+    ```
+7. The key to understanding the Liskov Substitution Principle is thinking about _processes that use_ (sub)classes, rather than the (sub)classes themselves. In the bad example here, the UnitUpgrader purports to accept any Apartment (an abstract class) and upgrade it. However, once the UnitUpgrader starts upgrading the apartment (`upgrade(Apartment)`), it checks the specific class/subtype of the Apartment object to make sure it doesn't add a bedroom to a Studio (which by definition has zero bedrooms). A Studio object therefore cannot be substituted in for any Apartment.
+
+If you don't follow the LSP, external processes will either break, behave improperly, or need to know too much information
+
+## 1.4 Update the code to comply with  Interface Segregation Principle
+1. Open the java file [EagleModified.java](../module4/SOLID-main/interface_segregation/good/src/EagleModified.java)
+2. Edit the file and copy the following code after line 5.
+    ```
+           String currentLocation;
+            int numberOfFeathers;
+
+            public EagleModified(int initialNumberOfFeathers) {
+                this.numberOfFeathers = initialNumberOfFeathers;
+            }
+
+            public void fly() {
+                this.currentLocation = "in the air";
+            }
+
+            public void molt() {
+                this.numberOfFeathers -= 1;
+            }
+    ```
+3. Open the java file [FeatheredCreature.java](../module4/SOLID-main/interface_segregation/good/src/FeatheredCreature.java)
+4. Edit the file and copy the following code after line 5.
+    ```
+     public void molt();
+    ```
+5. Open the java file [FlyingCreature.java](../module4/SOLID-main/interface_segregation/good/src/FlyingCreature.java)
+6. Edit the file and copy the following code after line 5.
+    ```
+     public void fly();
+    ```
+7. Open the java file [SwimmingCreature.java](../module4/SOLID-main/interface_segregation/good/src/SwimmingCreature.java)
+8. Edit the file and copy the following code after line 5.
+    ```
+    public void swim();
+    ```
+9. Open the java file [PenguinModified.java](../module4/SOLID-main/interface_segregation/good/src/PenguinModified.java)
+10. Edit the file and copy the following code after line 5.
+    ```
+        String currentLocation;
+        int numberOfFeathers;
+
+        public PenguinModified(int initialFeatherCount) {
+            this.numberOfFeathers = initialFeatherCount;
+        }
+
+        public void swim() {
+            this.currentLocation = "in the water";
+        }
+
+        public void molt() {
+            this.numberOfFeathers -= 4;
+        }
+    ```
+11. You have now implemented interface segregation.
+12.  It may seem reasonable to create a Bird interface that outlines the basic features of birds--they can fly and they can shed their feathers. It works for plenty of birds (like an eagle), but then we want to add penguins to our code. The penguin is technically a bird, but if we set it to implement our Bird interface, we have to throw an exception for the `fly()` method. The penguin should not be forced to depend on an action it cannot perform.
+
+Instead, make interfaces more abstract. It helps adhere to both the SRP (the interface is only responsible for one particular behavior) and this Interface Segregation Principle because specific objects (like eagles and penguins) only implement the functionality they need.
