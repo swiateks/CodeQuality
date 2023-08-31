@@ -2,33 +2,68 @@
 In this lab you will implement each of the SOLID Principles and update the code
 > Duration: 30-40 minutes
 
-## 1.1 Update the code file and add comments to provide details about sections of code
+## 1.1 Update the code to comply with Single Responsibility Principle
 
-1. Open the java file [AzSearchConfig.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/AzSearchConfig.java)
-2. Edit the file and copy the following comment after line 12:
+1. Open the file [BoardPresenter.java](../module4/SOLID-main/single_responsibility/good/src/BoardPresenter.java)
+2. Edit the file and copy the following code to Display Board after line 12:
+  
    ```
-   // This class is provided as an example of how to configure the Azure Cognitive Search vector store.
+   public void displayBoard() {
+        String formattedBoard = "";
+        for (int i = 0; i < this.board.size*this.board.size; i++) {
+            String borderOrNewline = "";
+            if ((i+1) % board.size == 0) {
+                borderOrNewline += "\n";
+            }
+            else {
+                borderOrNewline += "|";
+            }
+            formattedBoard += board.spots.get(i);
+            formattedBoard += borderOrNewline;
+        }
+        System.out.print(formattedBoard);
+    }
+
    ```
-3. Copy the following comment after line 26:
+3. Open the java file [BoardShaper.java](../module4/SOLID-main/single_responsibility/good/src/BoardShaper.java)
+4. Edit the file and copy the following code after line 17
    ```
-   // This bean is only created if the property vector-store.type is set to azure-search.
+    for (int i = 0; i < this.size; i++) {
+            ArrayList<Integer> row = new ArrayList<Integer>();
+            for (int j = 0; j < this.size; j++) {
+                row.add((i*size)+(j));
+            }
+            rowIndexes.add(row);
+        }
+
    ```
 5. Save the file and commit the changes.
-6. Now you have added meaningful code comments to make it easier for the reader to infer the functionality of the code.
+6. After the changes consider the BoardModified class in the "good" example. The only thing it is responsible for is knowing the values of its spots. It is entirely unconcerned with how those spots are being manipulated per the rules of Tic Tac Toe (rows, columns, diagonals) or displayed to the user (in a console, on the web, etc.). The BoardShaper and BoardPresenter classes are similarly focused on specific tasks. They are also only passed attributes they need; for example, BoardShaper objects are initialized with only a size (they don't need the whole board).
 
-## 1.2 Update the code file and adjust indentation to understand execution steps
+## 1.2 Update the code to comply with Open Closed Principle
 
-1. Open the java file [CliApplication.java](../spring-chatgpt-sample-main/spring-chatgpt-sample-cli/src/main/java/com/microsoft/azure/spring/chatgpt/sample/cli/CliApplication.java)
-2. Notice line 25, if block where a set of conditions are evaluated and actions are taken in a single line.
-3. Now replace this line 25 with below code snippet
+1. Open the java file [CasualPersonality.java](../module4/SOLID-main/open_closed/good/src/CasualPersonality.java)
+2. Edit the file and copy the following code after line 5.
     ```
-        if (from == null || from.size() != 1) {
-            System.err.println("argument --from is required.");
-            System.exit(-1);
+        public String greet() {
+            return "Sup bro?";
         }
-        indexPlanner.buildFromFolder(from.get(0));
+    ```
+3. Open the java file [FormalPersonality.java](../module4/SOLID-main/open_closed/good/src/FormalPersonality.java)
+4. Edit the file and copy the following code after line 5.
+    ```
+        public String greet() {
+            return "Good evening, sir.";
+        }
+    ```
+5. Open the java file [IntimatePersonality.java](../module4/SOLID-main/open_closed/good/src/IntimatePersonality.java)
+6. Edit the file and copy the following code after line 5.
+    ```
+        public String greet() {
+            return "Hello Dear!";
+        }
      ```
-4. Notice that both the previous code and current code snippet does the same job but it is now better indented and hence improves readability.
+7. Notice how in the bad example, any time we want to add a new style of greeting, we have to change the Greeter class to accept a new type of personality. We don't want to have to modify our existing, working code to add something new. Instead, as demonstrated in the good example, we have a high-level Greeter class that is instantiated with some Personality... we don't know which yet, just that it will be some object that implements the Personality interface. Now we can add new objects like FormalPersonality, CasualPersonality, and IntimatePersonality, and just make sure they correctly implement the Personality interface (in this case that means they must have a `greet()` method). The Greeter class is now open for future extension, while remaining closed for modification.
 
 ## 1.3 Update the code file to be consitent with Naming Convensions
 
