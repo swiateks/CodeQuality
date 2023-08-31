@@ -179,7 +179,7 @@ Instead, make interfaces more abstract. It helps adhere to both the SRP (the int
             System.out.print("It is rainy");
     }
     ```
-5. Open the java file [Notifier.java](../module4/SOLID-main/dependency_inversion/good/src/Notifier.java)
+5. Open the interface  [Notifier.java](../module4/SOLID-main/dependency_inversion/good/src/Notifier.java)
 6. Edit the file and copy the following code after line 5.
     ```
         public void alertWeatherConditions(String weatherConditions);
