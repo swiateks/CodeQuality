@@ -18,8 +18,8 @@ In this lab you will fork the repository and start making code changes to enforc
 - [x] Hands-on Labs Setup
 - [ ] Module 1: Writing Quality Code
       > References:
-      - [https://github.com/Azure-Samples/spring-chatgpt-sample]
-      - Java 17 or later [https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-17081-lts]
+      - [Spring-ChatGPT-Sample](https://github.com/Azure-Samples/spring-chatgpt-sample)
+      - [Java 17 or later] (https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-17081-lts)
       - mvn clean install -"Dcheckstyle.skip"
 - [ ] Module 2: Reviewing Code
       > Sample code snippets
