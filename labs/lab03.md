@@ -4,7 +4,7 @@ In this lab you write simple test cases to verify your code.
 
 ## 2.1 Writing Unit Tests
 
-1. Open the java file [Calculator.java](../module3/codeTesting/Calculator.java)
+1. Open the java file [Calculator.java](../module3/codeTesting/src/main/java/codeTesting/Calculator.java)
 2. Notice the method multiply.
 3. Create folder /src/test/java and Create a file CalculatorTest.java inside the folder.
 4. Copy the below code to test the Calculator function
