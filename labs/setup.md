@@ -9,7 +9,7 @@ In this lab you will fork the repository and start making code changes to enforc
 
 1. Fork the current repository [CodeQuality](https://github.com/BasujitaBhattacharya/CodeQuality)
 2. Optional, copy or clone the repository by importing the repository into your account.
-3. _(Optional)_ Install Visual Studio code and clone the repository
+3. _(Optional)_ Install Visual Studio code and clone the repository  [VSCoode](https://code.visualstudio.com/download)
 
 - Title: Training - Hands-on Labs & Activities
 ## Hands-on Labs & Activities:
