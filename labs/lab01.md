@@ -129,4 +129,4 @@ In this lab you will update and run your first code changes.
    ```
 6. Save and commit the file
 7. Notice now there is only one college method implementation on line being called from all the methods.
-8. You can compare the changes by navigating to > 
+8. You can compare the changes by navigating to commit history in the Repository and clicking commit details.
