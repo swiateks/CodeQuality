@@ -6,7 +6,7 @@ public class Company {
         System.out.println("Second line");
         System.out.println("Third line");
         int[] myIntArray = new int[]{1, 2, 3};
-        print4hItemInArray(myIntArray);
+        print4thItemInArray(myIntArray);
         System.out.println("Fourth line");
         System.out.println("Fith line");
     } 
