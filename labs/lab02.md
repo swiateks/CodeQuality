@@ -27,7 +27,7 @@ In this lab you will identify issues with code and provide reviews to rectify th
 
 1. Open the java file [Company.java](../module2/codeReview/Company.java)
 2. Notice The main method tries to print the fourth item in the array, which doesn’t exist.
-3. If you execute this program, it causes the ArrayIndexOutOfBoundsException exception to be thrown.
+3. If you execute this program(Run as Java from VS Code), it causes the ArrayIndexOutOfBoundsException exception to be thrown.
 4. When that happens, the program’s execution is stopped and the exception’s message is shown.
 5. The fourth and fifth messages are never displayed. There is no exception handling.
 6. Now replace this entire code will below snippet
@@ -93,15 +93,14 @@ In this lab you will identify issues with code and provide reviews to rectify th
 ## 2.4 Review Null pointers
 1. Open the java file [NullPointerExceptionExample.java](../module2/codeReview/NullPointerExceptionExample.java)
 2. In this example, the printLength() method calls the length() method of a String without performing a null check prior to calling the method.
-3. To fix the NullPointerException in the above example, the string should be checked for null or empty values before it is used any further
-4. Replace the contents of this file with below code:
+3. If you execute this program(Run as Java from VS Code), it causes NullPointerException to be thrown.
+4. To fix the NullPointerException in the above example, the string should be checked for null or empty values before it is used any further.
+5. Replace the contents of this file with below code:
 
    ```
-        import org.apache.commons.lang3.StringUtils;
-   
          public class NullPointerExceptionExample {
              private static void printLength(String str) {
-                 if (StringUtils.isNotEmpty(str)) {
+                 if (str != null && !"".equals(str)) {
                      System.out.println(str.length());
                  } else {
                      System.out.println("Empty string");
@@ -114,6 +113,6 @@ In this lab you will identify issues with code and provide reviews to rectify th
              }
          }
    ```
-7. Save and commit the file
-8. The code is updated with a check in the printLength() method that makes sure the string is not empty using the apache commons StringUtils.isNotEmpty() method.
-9. Only if the string is not empty the length() method of the string is called, else it prints the message Empty string to console.
+6. Save and commit the file
+7. The code is updated with a check in the printLength() method that makes sure the string is not empty using the (str != null && !"".equals(str)) checks.
+8. Only if the string is not empty the length() method of the string is called, else it prints the message Empty string to console.
