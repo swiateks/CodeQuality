@@ -1,8 +1,8 @@
-# 2 - Testing Code
+# 3 - Testing Code
 In this lab you write simple test cases to verify your code.
 > Duration: 15-20 minutes
 
-## 2.1 Writing Unit Tests
+## 3.1 Writing Unit Tests
 
 1. Open the java file [Calculator.java](../module3/codeTesting/src/main/java/Calculator.java)
 2. Notice the method multiply.
@@ -49,7 +49,7 @@ In this lab you write simple test cases to verify your code.
 9. @RepeatedTest defines that this test method will be executed multiple times, in this example 5 times
 
 
-## 2.2 JUnit test class naming conventions
+## 3.2 JUnit test class naming conventions
 
 Build tools like Maven use a pattern to decide if a class is a test classes or not. The following is the list of classes Maven considers automatically during its build:
 
@@ -64,7 +64,7 @@ Build tools like Maven use a pattern to decide if a class is a test classes or n
 - includes all of its subdirectories and all Java filenames that end with TestCase.
 Therefore, it is common practice to use the Test or Tests suffix at the end of test classes names.
 
-## 2.3 Where should the test be located?
+## 3.3 Where should the test be located?
 Typical, unit tests are created in a separate source folder to keep the test code separate from the real code. The standard convention from the Maven and Gradle build tools is to use:
 
 src/main/java - for Java classes
