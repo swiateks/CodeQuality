@@ -24,6 +24,7 @@ In this lab you will fork the repository and start making code changes to enforc
 - [ ] Module 2: Reviewing Code
       > Sample code snippets
       > Not designed to build/install as java projects
+      > Run standalone class with main method as Java Programs
 - [ ] Module 3: Testing Code
 - [ ] Module 4: SOLID Principles
 ```
