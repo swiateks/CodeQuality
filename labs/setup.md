@@ -19,7 +19,8 @@ In this lab you will fork the repository and start making code changes to enforc
 - [ ] Module 1: Writing Quality Code
       > References:
       - [https://github.com/Azure-Samples/spring-chatgpt-sample]
-      - Java 17 or later  
+      - Java 17 or later
+      - mvn clean install -Dcheckstyle.skip
 - [ ] Module 2: Reviewing Code
 - [ ] Module 3: Testing Code
 - [ ] Module 4: SOLID Principles
