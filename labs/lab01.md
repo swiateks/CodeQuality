@@ -58,7 +58,7 @@ In this lab you will update and run your first code changes.
 1. Open the java file [SimpleCollegeApp.java](../module1/codeWriting/dry-principle/SimpleCollegeApp.java)
 2. Notice the varaibles methods college(),college1() and college2() on line 12,25 and 39.
 3. These essentially perform the same acvitity of printing the College and Department Name.
-4. Now open the java file [SimpleCollegeAppDRY.java](../dry-principle/SimpleCollegeAppDRY.java)
+4. Now open the java file [SimpleCollegeAppDRY.java](../module1/codeWriting/dry-principle/SimpleCollegeAppDRY.java)
 5. Replace the contents of this file with below code:
 
    ```
