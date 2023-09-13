@@ -11,7 +11,6 @@ In this lab you will fork the repository and start making code changes to enforc
 2. Optional, copy or clone the repository by importing the repository into your account.
 3. _(Optional)_ Install [Visual Studio code](https://code.visualstudio.com/download) and clone the repository.
 
-- Title: Training - Hands-on Labs & Activities
 ## Hands-on Labs & Activities:
 -  Hands-on Labs Setup
 -  Module 1: Writing Quality Code
