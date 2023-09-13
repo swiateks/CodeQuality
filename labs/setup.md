@@ -12,8 +12,6 @@ In this lab you will fork the repository and start making code changes to enforc
 3. _(Optional)_ Install Visual Studio code and clone the repository
 
 - Title: Training - Hands-on Labs & Activities
-- Content:
-```markdown
 ## Hands-on Labs & Activities:
 - [x] Hands-on Labs Setup
 - [ ] Module 1: Writing Quality Code
@@ -27,4 +25,4 @@ In this lab you will fork the repository and start making code changes to enforc
       > Run standalone class with main method as Java Programs
 - [ ] Module 3: Testing Code
 - [ ] Module 4: SOLID Principles
-```
+
