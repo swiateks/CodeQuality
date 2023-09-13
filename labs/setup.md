@@ -14,7 +14,7 @@ In this lab you will fork the repository and start making code changes to enforc
 - Title: Training - Hands-on Labs & Activities
 - Content:
 ```markdown
-### Hands-on Labs & Activities:
+## Hands-on Labs & Activities:
 - [x] Hands-on Labs Setup
 - [ ] Module 1: Writing Quality Code
       > References:
