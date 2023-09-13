@@ -1,8 +1,8 @@
-# 1 - SOLID Principles
+# 4 - SOLID Principles
 In this lab you will implement each of the SOLID Principles and update the code
 > Duration: 30-40 minutes
 
-## 1.1 Update the code to comply with Single Responsibility Principle
+## 4.1 Update the code to comply with Single Responsibility Principle
 
 1. Open the file [BoardPresenter.java](../module4/SOLID-main/single_responsibility/good/src/BoardPresenter.java)
 2. Edit the file and copy the following code to Display Board after line 12:
@@ -40,7 +40,7 @@ In this lab you will implement each of the SOLID Principles and update the code
 5. Save the file and commit the changes.
 6. After the changes consider the BoardModified class in the "good" example. The only thing it is responsible for is knowing the values of its spots. It is entirely unconcerned with how those spots are being manipulated per the rules of Tic Tac Toe (rows, columns, diagonals) or displayed to the user (in a console, on the web, etc.). The BoardShaper and BoardPresenter classes are similarly focused on specific tasks. They are also only passed attributes they need; for example, BoardShaper objects are initialized with only a size (they don't need the whole board).
 
-## 1.2 Update the code to comply with Open Closed Principle
+## 4.2 Update the code to comply with Open Closed Principle
 
 1. Open the java file [CasualPersonality.java](../module4/SOLID-main/open_closed/good/src/CasualPersonality.java)
 2. Edit the file and copy the following code after line 5.
@@ -65,7 +65,7 @@ In this lab you will implement each of the SOLID Principles and update the code
      ```
 7. Notice how in the bad example, any time we want to add a new style of greeting, we have to change the Greeter class to accept a new type of personality. We don't want to have to modify our existing, working code to add something new. Instead, as demonstrated in the good example, we have a high-level Greeter class that is instantiated with some Personality... we don't know which yet, just that it will be some object that implements the Personality interface. Now we can add new objects like FormalPersonality, CasualPersonality, and IntimatePersonality, and just make sure they correctly implement the Personality interface (in this case that means they must have a `greet()` method). The Greeter class is now open for future extension, while remaining closed for modification.
 
-## 1.3 Update the code to comply with  Liskov's Substitution Principle
+## 4.3 Update the code to comply with  Liskov's Substitution Principle
 
 1. Open the java file [StudioModified.java](../module4/SOLID-main/liskov_substitution/good/src/StudioModified.java)
 2. Edit the file and copy the following code after line 7.
@@ -105,7 +105,7 @@ In this lab you will implement each of the SOLID Principles and update the code
 
 If you don't follow the LSP, external processes will either break, behave improperly, or need to know too much information
 
-## 1.4 Update the code to comply with  Interface Segregation Principle
+## 4.4 Update the code to comply with  Interface Segregation Principle
 1. Open the java file [EagleModified.java](../module4/SOLID-main/interface_segregation/good/src/EagleModified.java)
 2. Edit the file and copy the following code after line 5.
     ```
@@ -162,7 +162,7 @@ If you don't follow the LSP, external processes will either break, behave improp
 
 Instead, make interfaces more abstract. It helps adhere to both the SRP (the interface is only responsible for one particular behavior) and this Interface Segregation Principle because specific objects (like eagles and penguins) only implement the functionality they need.
 
-## 1.5 Update the code to comply with  Dependency Inversion Principle
+## 4.5 Update the code to comply with  Dependency Inversion Principle
 1. Open the java file [EmailClient.java](../module4/SOLID-main/dependency_inversion/good/src/EmailClient.java)
 2. Edit the file and copy the following code after line 5.
     ```
