@@ -19,5 +19,5 @@ In this lab you will fork the repository and start making code changes to enforc
 - [ ] Module 1: Writing Quality Code
 - [ ] Module 2: Reviewing Code
 - [ ] Module 3: Testing Code
-- [ ] Module 4: Maintaining Code
+- [ ] Module 4:  SOLID Principles
 ```
