@@ -12,7 +12,7 @@ In this lab you will fork the repository and start making code changes to enforc
 3. _(Optional)_ Install [Visual Studio code](https://code.visualstudio.com/download) and clone the repository.
 4. _(Optional)_ Install Extension Pack for Java in VSCode.
  ![image](https://github.com/BasujitaBhattacharya/CodeQuality/assets/121059306/2b196e6a-8187-49a4-89ee-ba31915c65c4)
-5. Install Maven for Java
+5. _(Optional)_ Install Maven for Java
 ![image](https://github.com/BasujitaBhattacharya/CodeQuality/assets/121059306/ddc5dd13-990d-4a00-be6e-397326ce2a1a)
 
 
