@@ -10,6 +10,9 @@ In this lab you will fork the repository and start making code changes to enforc
 1. Fork the current repository [CodeQuality](https://github.com/BasujitaBhattacharya/CodeQuality)
 2. _(Optional)_ copy or clone the repository by importing the repository into your account.
 3. _(Optional)_ Install [Visual Studio code](https://code.visualstudio.com/download) and clone the repository.
+4. _(Optional)_ Install Extension Pack for Java in VSCode.
+5. ![image](https://github.com/BasujitaBhattacharya/CodeQuality/assets/121059306/2b196e6a-8187-49a4-89ee-ba31915c65c4)
+
 
 ## Hands-on Labs & Activities:
 -  Hands-on Labs Setup
