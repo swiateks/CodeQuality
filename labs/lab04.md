@@ -4,8 +4,10 @@ In this lab you will implement each of the SOLID Principles and update the code
 
 ## 4.1 Update the code to comply with Single Responsibility Principle
 
-1. Open the file [BoardPresenter.java](../module4/SOLID-main/single_responsibility/good/src/BoardPresenter.java)
-2. Edit the file and copy the following code to Display Board after line 12:
+1. Look at the bad example, or the violation of Principle at [Board.java](../module4/SOLID-main/single_responsibility/bad/src/Board.java)
+2. This class is creating all the rows and displaying them.
+3. Open the file [BoardPresenter.java](../module4/SOLID-main/single_responsibility/good/src/BoardPresenter.java)
+4. Edit the file and copy the following code to Display Board after line 12:
   
    ```
    public void displayBoard() {
@@ -25,8 +27,8 @@ In this lab you will implement each of the SOLID Principles and update the code
     }
 
    ```
-3. Open the java file [BoardShaper.java](../module4/SOLID-main/single_responsibility/good/src/BoardShaper.java)
-4. Edit the file and copy the following code after line 17
+5. Open the java file [BoardShaper.java](../module4/SOLID-main/single_responsibility/good/src/BoardShaper.java)
+6. Edit the file and copy the following code after line 17
    ```
     for (int i = 0; i < this.size; i++) {
             ArrayList<Integer> row = new ArrayList<Integer>();
@@ -37,8 +39,8 @@ In this lab you will implement each of the SOLID Principles and update the code
         }
 
    ```
-5. Save the file and commit the changes.
-6. After the changes consider the BoardModified class in the "good" example. The only thing it is responsible for is knowing the values of its spots. It is entirely unconcerned with how those spots are being manipulated per the rules of Tic Tac Toe (rows, columns, diagonals) or displayed to the user (in a console, on the web, etc.). The BoardShaper and BoardPresenter classes are similarly focused on specific tasks. They are also only passed attributes they need; for example, BoardShaper objects are initialized with only a size (they don't need the whole board).
+7. Save the file and commit the changes.
+8. After the changes consider the BoardModified class in the "good" example. The only thing it is responsible for is knowing the values of its spots. It is entirely unconcerned with how those spots are being manipulated per the rules of Tic Tac Toe (rows, columns, diagonals) or displayed to the user (in a console, on the web, etc.). The BoardShaper and BoardPresenter classes are similarly focused on specific tasks. They are also only passed attributes they need; for example, BoardShaper objects are initialized with only a size (they don't need the whole board).
 
 ## 4.2 Update the code to comply with Open Closed Principle
 
