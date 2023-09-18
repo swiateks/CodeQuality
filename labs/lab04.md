@@ -5,7 +5,7 @@ In this lab you will implement each of the SOLID Principles and update the code
 ## 4.1 Update the code to comply with Single Responsibility Principle
 
 1. Look at the bad example, or the violation of Principle at [Board.java](../module4/SOLID-main/single_responsibility/bad/src/Board.java)
-2. This class is creating all the rows and displaying them.
+2. This class is creating all the rows and displaying them. Look at the repetitive nature of its tasks and how its trying to achieve too many activities.
 3. Open the file [BoardPresenter.java](../module4/SOLID-main/single_responsibility/good/src/BoardPresenter.java)
 4. Edit the file and copy the following code to Display Board after line 12:
   
