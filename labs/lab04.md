@@ -176,6 +176,7 @@ In this lab you will implement each of the SOLID Principles and update the code
         }
     ```
 16. You have now implemented interface segregation.
+17. Notice how each class, EagleModified and PenguinModified only implements the interfaces relevant to its function - Pengui being a swimming creature and Eagle a flying creature.
 
 Making interfaces more abstract helps adhere to both the SRP (the interface is only responsible for one particular behavior) and this Interface Segregation Principle because specific objects (like eagles and penguins) only implement the functionality they need.
 
