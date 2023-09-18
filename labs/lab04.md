@@ -119,7 +119,7 @@ In this lab you will implement each of the SOLID Principles and update the code
 14. If you don't follow the LSP, external processes will either break, behave improperly, or need to know too much information
 
 ## 4.4 Update the code to comply with  Interface Segregation Principle
-1. Notice in the bad example the interface [Bird.java](../module4/SOLID-main/interface_segregation/bad/src/Bird.java) is implemented by 2 classes [Eagle.java](module4/SOLID-main/interface_segregation/bad/src/Eagle.java) and [Penguin.java](module4/SOLID-main/interface_segregation/bad/src/Penguin.java).
+1. Notice in the bad example the interface [Bird.java](../module4/SOLID-main/interface_segregation/bad/src/Bird.java) is implemented by 2 classes [Eagle.java](../module4/SOLID-main/interface_segregation/bad/src/Eagle.java) and [Penguin.java](../module4/SOLID-main/interface_segregation/bad/src/Penguin.java).
 2. Open the java file [EagleModified.java](../module4/SOLID-main/interface_segregation/good/src/EagleModified.java)
 3. Edit the file and copy the following code after line 5.
     ```
