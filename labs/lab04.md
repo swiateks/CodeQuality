@@ -28,8 +28,9 @@ In this lab you will implement each of the SOLID Principles and update the code
     }
 
    ```
-6. Open the java file [BoardShaper.java](../module4/SOLID-main/single_responsibility/good/src/BoardShaper.java)
-7. Edit the file and copy the following code after line 17
+6. Now the BoardPresenter is resposible only for the Display.
+7. Open the java file [BoardShaper.java](../module4/SOLID-main/single_responsibility/good/src/BoardShaper.java)
+8. Edit the file and copy the following code after line 17
    ```
     for (int i = 0; i < this.size; i++) {
             ArrayList<Integer> row = new ArrayList<Integer>();
@@ -40,8 +41,9 @@ In this lab you will implement each of the SOLID Principles and update the code
         }
 
    ```
-8. Save the file and commit the changes.
-9. After the changes consider the BoardModified class in the "good" example. The only thing it is responsible for is knowing the values of its spots. It is entirely unconcerned with how those spots are being manipulated per the rules of Tic Tac Toe (rows, columns, diagonals) or displayed to the user (in a console, on the web, etc.). The BoardShaper and BoardPresenter classes are similarly focused on specific tasks. They are also only passed attributes they need; for example, BoardShaper objects are initialized with only a size (they don't need the whole board).
+9. Save the file and commit the changes.
+10. The Board Shaper is responsible for creating and adding new rows.
+11. After the changes consider the BoardModified class in the "good" example. The only thing it is responsible for is knowing the values of its spots. It is entirely unconcerned with how those spots are being manipulated per the rules of Tic Tac Toe (rows, columns, diagonals) or displayed to the user (in a console, on the web, etc.). The BoardShaper and BoardPresenter classes are similarly focused on specific tasks. They are also only passed attributes they need; for example, BoardShaper objects are initialized with only a size (they don't need the whole board).
 
 ## 4.2 Update the code to comply with Open Closed Principle
 
