@@ -48,29 +48,30 @@ In this lab you will implement each of the SOLID Principles and update the code
 ## 4.2 Update the code to comply with Open Closed Principle
 
 1.  Notice how in the bad example, [Greeter.java](../module4/SOLID-main/open_closed/bad/src/Greeter.java) any time we want to add a new style of greeting, we have to change the Greeter class to accept a new type of personality.
-2.  We don't want to have to modify our existing, working code to add something new
-3. Open the java file [CasualPersonality.java](../module4/SOLID-main/open_closed/good/src/CasualPersonality.java)
-4. Edit the file and copy the following code after line 5.
+2.  We don't want to have to modify our existing, working code to add something new.
+3.  Let us make small changes to implement OCP.
+4. Open the java file [CasualPersonality.java](../module4/SOLID-main/open_closed/good/src/CasualPersonality.java)
+5. Edit the file and copy the following code after line 5.
     ```
         public String greet() {
             return "Sup bro?";
         }
     ```
-5. Open the java file [FormalPersonality.java](../module4/SOLID-main/open_closed/good/src/FormalPersonality.java)
-6. Edit the file and copy the following code after line 5.
+6. Open the java file [FormalPersonality.java](../module4/SOLID-main/open_closed/good/src/FormalPersonality.java)
+7. Edit the file and copy the following code after line 5.
     ```
         public String greet() {
             return "Good evening, sir.";
         }
     ```
-7. Open the java file [IntimatePersonality.java](../module4/SOLID-main/open_closed/good/src/IntimatePersonality.java)
-8. Edit the file and copy the following code after line 5.
+8. Open the java file [IntimatePersonality.java](../module4/SOLID-main/open_closed/good/src/IntimatePersonality.java)
+9. Edit the file and copy the following code after line 5.
     ```
         public String greet() {
             return "Hello Dear!";
         }
      ```
-9. Instead, as demonstrated in the good example, we have a high-level Greeter class that is instantiated with some Personality... we don't know which yet, just that it will be some object that implements the Personality interface. Now we can add new objects like FormalPersonality, CasualPersonality, and IntimatePersonality, and just make sure they correctly implement the Personality interface (in this case that means they must have a `greet()` method). The Greeter class is now open for future extension, while remaining closed for modification.
+10. Instead, as demonstrated in the good example, we have a high-level Greeter class that is instantiated with some Personality... we don't know which yet, just that it will be some object that implements the Personality interface. Now we can add new objects like FormalPersonality, CasualPersonality, and IntimatePersonality, and just make sure they correctly implement the Personality interface (in this case that means they must have a `greet()` method). The Greeter class is now open for future extension, while remaining closed for modification.
 
 ## 4.3 Update the code to comply with  Liskov's Substitution Principle
 
