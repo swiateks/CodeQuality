@@ -181,29 +181,33 @@ In this lab you will implement each of the SOLID Principles and update the code
 Making interfaces more abstract helps adhere to both the SRP (the interface is only responsible for one particular behavior) and this Interface Segregation Principle because specific objects (like eagles and penguins) only implement the functionality they need.
 
 ## 4.5 Update the code to comply with  Dependency Inversion Principle
-1. Open the java file [EmailClient.java](../module4/SOLID-main/dependency_inversion/good/src/EmailClient.java)
-2. Edit the file and copy the following code after line 5.
+1. Notice in the bad example here, the [WeatherTracker.java](../module4/SOLID-main/dependency_inversion/bad/src/WeatherTracker.java) depends on the low-level details of the different notification systems (a phone, an emailer, etc.).
+2. Its contructor is creating new objects of phone and emailer and depending on weather conditions sending the alerts.
+3. These should instead be depending on some abstraction.
+4. The good example introduces this abstraction--a "Notifier" interface.
+5. Open the java file [EmailClient.java](../module4/SOLID-main/dependency_inversion/good/src/EmailClient.java)
+6. Edit the file and copy the following code after line 5.
     ```
     public void alertWeatherConditions(String weatherConditions) {
         if (weatherConditions == "sunny");
             System.out.print("It is sunny");
     }
     ```
-3. Open the java file [MobileDevice.java](../module4/SOLID-main/dependency_inversion/good/src/MobileDevice.java)
-4. Edit the file and copy the following code after line 5.
+7. Open the java file [MobileDevice.java](../module4/SOLID-main/dependency_inversion/good/src/MobileDevice.java)
+8. Edit the file and copy the following code after line 5.
     ```
     public void alertWeatherConditions(String weatherConditions) {
         if (weatherConditions == "rainy")
             System.out.print("It is rainy");
     }
     ```
-5. Open the interface  [Notifier.java](../module4/SOLID-main/dependency_inversion/good/src/Notifier.java)
-6. Edit the file and copy the following code after line 5.
+9. Open the interface  [Notifier.java](../module4/SOLID-main/dependency_inversion/good/src/Notifier.java)
+10. Edit the file and copy the following code after line 5.
     ```
         public void alertWeatherConditions(String weatherConditions);
     ```
-7. Open the java file [WeatherTrackerModified.java](../module4/SOLID-main/dependency_inversion/good/src/WeatherTrackerModified.java)
-8. Edit the file and copy the following code after line 5.
+11. Open the java file [WeatherTrackerModified.java](../module4/SOLID-main/dependency_inversion/good/src/WeatherTrackerModified.java)
+12. Edit the file and copy the following code after line 5.
     ```
     String currentConditions;
     public void setCurrentConditions(String weatherDescription) {
@@ -214,4 +218,4 @@ Making interfaces more abstract helps adhere to both the SRP (the interface is o
         notifier.alertWeatherConditions(currentConditions);
     }
     ```
-9. Notice in the bad example here, the WeatherTracker depends on the low-level details of the different notification systems (a phone, an emailer, etc.). These should instead be depending on some abstraction. The good example introduces this abstraction--a "Notifier" interface.
+13. The good example introduces this abstraction--a "Notifier" interface which the EmailClient and MobileDevice can implement.
