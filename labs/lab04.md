@@ -75,8 +75,12 @@ In this lab you will implement each of the SOLID Principles and update the code
 
 ## 4.3 Update the code to comply with  Liskov's Substitution Principle
 
-1. Open the java file [StudioModified.java](../module4/SOLID-main/liskov_substitution/good/src/StudioModified.java)
-2. Edit the file and copy the following code after line 7.
+1. The key to understanding the Liskov Substitution Principle is thinking about _processes that use_ (sub)classes, rather than the (sub)classes themselves.
+2. In the bad example here, the [UnitUpgrader](../module4/SOLID-main/liskov_substitution/bad/src/UnitUpgrader.java) purports to accept any Apartment (an abstract class) and upgrade it.
+3. However, once the UnitUpgrader starts upgrading the apartment (`upgrade(Apartment)`), it checks the specific class/subtype of the Apartment object to make sure it doesn't add a bedroom to a Studio (which by definition has zero bedrooms).
+4. A Studio object therefore cannot be substituted in for any Apartment.
+5. Open the java file [StudioModified.java](../module4/SOLID-main/liskov_substitution/good/src/StudioModified.java)
+6. Edit the file and copy the following code after line 7.
     ```
         public StudioModified() {
             this.numberOfRooms = 0;
@@ -87,16 +91,16 @@ In this lab you will implement each of the SOLID Principles and update the code
         }
     ```
 
-3. Open the java file [BedroomAdder.java](../module4/SOLID-main/liskov_substitution/good/src/BedroomAdder.java)
-4. Edit the file and copy the following code after line 5.
+7. Open the java file [BedroomAdder.java](../module4/SOLID-main/liskov_substitution/good/src/BedroomAdder.java)
+8. Edit the file and copy the following code after line 5.
     ```
         public void addBedroom(PenthouseSuiteModified penthouse) {
         penthouse.numberOfBedrooms += 1;
     }
     ```
 
-5. Open the java file [PenthouseSuiteModified.java](../module4/SOLID-main/liskov_substitution/good/src/PenthouseSuiteModified.java)
-6. Edit the file and copy the following code after line 5.
+9. Open the java file [PenthouseSuiteModified.java](../module4/SOLID-main/liskov_substitution/good/src/PenthouseSuiteModified.java)
+10. Edit the file and copy the following code after line 5.
     ```
         int squareFootage;
         int numberOfBedrooms;
@@ -109,9 +113,7 @@ In this lab you will implement each of the SOLID Principles and update the code
             this.squareFootage = sqft;
         }
     ```
-7. The key to understanding the Liskov Substitution Principle is thinking about _processes that use_ (sub)classes, rather than the (sub)classes themselves. In the bad example here, the UnitUpgrader purports to accept any Apartment (an abstract class) and upgrade it. However, once the UnitUpgrader starts upgrading the apartment (`upgrade(Apartment)`), it checks the specific class/subtype of the Apartment object to make sure it doesn't add a bedroom to a Studio (which by definition has zero bedrooms). A Studio object therefore cannot be substituted in for any Apartment.
-
-If you don't follow the LSP, external processes will either break, behave improperly, or need to know too much information
+11. If you don't follow the LSP, external processes will either break, behave improperly, or need to know too much information
 
 ## 4.4 Update the code to comply with  Interface Segregation Principle
 1. Open the java file [EagleModified.java](../module4/SOLID-main/interface_segregation/good/src/EagleModified.java)
