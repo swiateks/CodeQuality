@@ -115,7 +115,8 @@ In this lab you will implement each of the SOLID Principles and update the code
     ```
 11. What is done here now is that the BedroomAdder only adds bedroom to a PenthouseSuite object.
 12. You can have a Unit Upgrader further to keep adding square foot while adding bedrooms is for Penhouses only.
-13. If you don't follow the LSP, external processes will either break, behave improperly, or need to know too much information
+13. That way Functions usings references should be able to use objects without thorough knowledge of all the inheritance internally.
+14. If you don't follow the LSP, external processes will either break, behave improperly, or need to know too much information
 
 ## 4.4 Update the code to comply with  Interface Segregation Principle
 1. Open the java file [EagleModified.java](../module4/SOLID-main/interface_segregation/good/src/EagleModified.java)
