@@ -47,7 +47,7 @@ public class SimpleCollegeApp {
     {
  
         // Creating object of class in main() method
-        GFG s = new GFG();
+        SimpleCollegeApp s = new SimpleCollegeApp();
  
         // Calling above methods one by one
         // as created above
