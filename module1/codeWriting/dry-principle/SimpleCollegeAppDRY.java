@@ -53,7 +53,7 @@
        {
     
            // Creating object of class in main() method
-           GFG s = new GFG();
+           SimpleCollegeAppDRY s = new SimpleCollegeAppDRY();
     
            // Calling the methods one by one
            // as created above
