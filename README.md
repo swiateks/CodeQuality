@@ -32,4 +32,4 @@
 
 ### Module 5: Test Driven Design Principles
 - Example: [TEST-DRIVEN-DESIGN-Examples](https://github.com/topics/test-driven-development)
-- [ ] _Hands-on Lab:_ :point_right: [Activity 5](/labs/lab05.md)
+- [ ] _Hands-on Lab:_ :point_right: [Activity 5](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/unit-testing/tdd_example/)
