@@ -29,3 +29,7 @@
 ### Module 4: SOLID Principles
 - Example: [SOLID-Principles-Examples](examples/solid-principles)
 - [ ] _Hands-on Lab:_ :point_right: [Activity 4](/labs/lab04.md)
+
+### Module 5: Test Driven Design Principles
+- Example: [TEST-DRIVEN-DESIGN-Examples](https://github.com/topics/test-driven-development)
+- [ ] _Hands-on Lab:_ :point_right: [Activity 5](/labs/lab05.md)
